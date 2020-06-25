@@ -1,0 +1,43 @@
+/*CHECK WHETHER A NO. IS PRIME OR NOT*/
+//Loop through 2 to half of num, because no number is divisible by more than its half.
+
+import java.util.Scanner;
+class Prime {
+
+    public static void main(String[] args) {
+
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Please insert any number");
+        int num= sc.nextInt();
+        boolean flag= false;
+       
+       //Checking if the number is divisible by any number in the given range (2..num/2).
+       //If it is, flag is set to true and we break out of the loop.
+       //Which determines num is not a prime number.
+         for(int i = 2; i <= num/2; ++i)
+        {
+            // condition for non prime number
+            if(num % i == 0)
+            {
+                flag = true;
+                break;
+            }
+        }
+
+        //If num isn't divisible by any number, flag is false and num is a prime number.
+        if (!flag)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
+    }
+}
+
+
+
+
+
+RESULT-:
+
+Please insert any number
+3
+3 is a prime number.
