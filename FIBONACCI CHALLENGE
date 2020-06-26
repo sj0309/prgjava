@@ -1,0 +1,56 @@
+//WITHOUT USING RECURSION
+//DONE WITH WHILE LOOP
+public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        int i = 1, t1 = 0, t2 = 1;
+        System.out.print("Fibonacci series of 10 numbers:");
+
+        while (i <= 10)
+        {
+            System.out.print(" " + t1 + " ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+
+            i++;
+        }
+    }
+}
+
+
+
+OUTPUT
+
+Fibonacci series of 10 numbers: 0  1  1  2  3  5  8  13  21  34
+
+
+
+
+//Using Recursion
+//Recursive function has the capability to call itself.
+public class Calc{
+	public static int fibonacciRecursion(int n){
+	if(n == 0){
+		return 0;
+	}
+	if(n == 1 || n == 2){
+			return 1;
+		}
+	return fibonacciRecursion(n-2) + fibonacciRecursion(n-1);
+	}
+    public static void main(String args[]) {
+	int maxNumber = 10;
+	System.out.print("Fibonacci Series of "+maxNumber+" numbers: ");
+	for(int i = 0; i < maxNumber; i++){
+			System.out.print(fibonacciRecursion(i) +" ");
+		}
+	}
+}
+
+
+
+OUTPUT
+Fibonacci Series of 10 numbers: 0 1 1 2 3 5 8 13 21 34 
