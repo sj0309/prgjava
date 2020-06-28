@@ -1,0 +1,76 @@
+import java.util.Scanner;
+ 
+public class Employee {
+ 
+ int emjoin;
+ String name;
+ float salary;
+ String add;
+ 
+ public void getInput() {
+ 
+  Scanner in = new Scanner(System.in);
+  System.out.print("Enter the emjoin :: ");
+  emjoin = in.nextInt();
+  System.out.print("Enter the name :: ");
+  name = in.next();
+  System.out.print("Enter the salary :: ");
+  salary = in.nextFloat();
+  System.out.print("Enter the address :: ");
+  add = in.next();
+ }
+ 
+ public void display() {
+  
+  System.out.println("Employee joining = " + emjoin);
+  System.out.println("Employee name = " + name);
+  System.out.println("Employee salary = " + salary);
+  System.out.println("Employee address = " + add);
+ }
+ 
+ public static void main(String[] args) {
+ 
+  Employee e[] = new Employee[3];
+ //CREATING AN ARRAY FOR 3 EMPLOYEES. 
+  for(int i=0; i<3; i++) {
+   
+   e[i] = new Employee();
+   e[i].getInput();
+  }
+  
+  System.out.println("**** Data Entered as above ****");
+  
+  for(int i=0; i<3; i++) {
+   
+   e[i].display();
+  }
+ }
+}
+
+
+OUTPUT(TERMINAL WINDOW)
+Enter the emjoin :: 1994
+Enter the name :: Robert
+Enter the salary :: 2350.50
+Enter the address :: 64C-WallStreet
+Enter the emjoin :: 2000
+Enter the name :: Sam
+Enter the salary :: 2356.50
+Enter the address :: 68D-WallStreet
+Enter the emjoin :: 1999
+Enter the name :: John
+Enter the salary :: 2345.50
+Enter the address :: 26B-WallsSTREET
+**** Data Entered as above ****
+Employee joining = 1994
+Employee name = Robert
+Employee salary = 2350.5
+Employee address = 64C-WallStreet
+Employee joining = 2000
+Employee name = Sam
+Employee salary = 2356.5
+Employee address = 68D-WallStreet
+Employee joining = 1999
+Employee name = John
+Employee salary = 2345.5
+Employee address = 26B-WallsSTREET
