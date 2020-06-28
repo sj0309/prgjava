@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Conversion {
+
+    public static void main(String[] Strings) {
+
+
+        double minutesY = 60 * 24 * 365;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input the number of minutes: ");
+        //DECLARING 'MINS' AS DOUBLE IN PACKAGE SCANNER
+        double mins = input.nextDouble();
+        //APPLYING FORMULAE FOR CONVERSION OF MINUTES INTO NO. OF YEARS & DAYS 
+        long years = (long) (mins / minutesY);
+        int days = (int) (mins / 60 / 24) % 365;
+        System.out.println((int) mins+ " minutes is approximately " + years + " years and " + days + " days");
+    }
+}
+
+
+
+OUTPUT
+Input the number of minutes: 3456789
+3456789 minutes is approximately 6 years and 210 days
